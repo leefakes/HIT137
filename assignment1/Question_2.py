@@ -1,6 +1,5 @@
 #----------------------------- Question 2 ----------------------------#
-'''
-
+"""
 Assume s is a string of numbers.
 
 Write a program that prints the longest substring of s in which the
@@ -15,10 +14,10 @@ For example, if s = '742951', then your program should print
     Longest substring in numeric descending order is: 742
 
 
-'''
-
+"""
 # Imports
 import random
+
 
 # Function definitions
 def string_of_numbers(length=15):
@@ -26,7 +25,7 @@ def string_of_numbers(length=15):
         Defaults to a length of 15 """
     return_string = ""
     for loop in range(length):
-        return_string += str(random.randint(0,9))
+        return_string += str(random.randint(0, 9))
 
     return return_string
 
@@ -46,7 +45,8 @@ test_string_list.append("987654321")
 test_string_list.append("123456765432102345654321")
 
 # Now add random numbers 40 characters long
-test_string_list += [string_of_numbers(60) for _ in range(3)]
+for _ in range(3):
+    test_string_list += [string_of_numbers(40)]
 
 # Big number test
 test_string_list.append(string_of_numbers(1000))
@@ -69,7 +69,7 @@ for number_string in test_string_list:
     while end_pos <= (len(number_string)-1):
         # Slice the number string and count the length
         descending_list.append(
-            (number_string[start_pos:end_pos],end_pos-start_pos))
+            (number_string[start_pos:end_pos], end_pos-start_pos))
 
         # If the next number is smaller than the previous
         if number_string[check_pos] < number_string[end_pos]:
@@ -96,7 +96,7 @@ for number_string in test_string_list:
 
     # Print the longest descending string
     print("Longest substring in numeric descending order is:",
-          longest_string,"\n")
+          longest_string, "\n")
 
 
 #------------------------- End of Question 2 -------------------------#

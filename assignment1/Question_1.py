@@ -1,5 +1,5 @@
 #----------------------------- Question 1 ----------------------------#
-'''
+"""
 
 Assume s is a string of numbers.
 Write a program that checks the string s for the values '2', '3', '5'
@@ -18,10 +18,11 @@ For example, if s = '568714523645873', your program should print:
 Give Five (5) different examples with its output.
 
 
-'''
+"""
 
 # Imports
 from random import randint
+
 
 # Function definitions
 def string_of_numbers(length=15):
@@ -35,7 +36,7 @@ def string_of_numbers(length=15):
     return return_string
 
 
-#------------------------- Main code ----------------------------#
+# ------------------------- Main code ----------------------------#
 
 # Initialise the list of strings to be searched
 search_strings = []
@@ -53,13 +54,13 @@ for search_string in search_strings:
     print("-"*30)
     # Print string to be searched
     print("The string to be searched is:")
-    print(search_string,f"({len(search_string)})","\n")
+    print(search_string, "(", len(search_string), ")\n")
     # Print heading for searches
     print("No. Index positions found")
     # Dictionary of values to search for and reset positions to blank
     search_term = {"2":[],"3":[],"5":[],"7":[]}
 
-    # Loop through the search_for criteria and add positions to the
+    # Loop through the search for criteria and add positions to the
     # dictionary
     for search in search_term:
         # Set index pointer to 0. Index pointer is used as the starting

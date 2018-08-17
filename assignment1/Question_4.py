@@ -24,7 +24,7 @@ if filename:
     file_check = pathlib.Path(filename)
     if file_check.is_file():
         # Open file for read only
-        file = open(filename,'r')
+        file = open(filename, 'r')
         # Read the lines from the file into memory
         lines = file.read().split("\n")
         # Close the file
@@ -34,7 +34,8 @@ if filename:
         # Set up a while loop to allow user to navigate file contents
         while True:
             # Print instructions
-            print("\nEnter a line number between 1 and",range_high,
+            print("\nEnter a line number between 1 and",
+                  range_high,
                   ": to display the line or zero (0) to exit.")
             display_line = input("Line number: ")
             # Check if display_line is numeric and not 0
@@ -53,7 +54,7 @@ if filename:
                         print("The line number is less than 0",
                               "\nPlease try again...")
                     else:
-                        print("\n",lines[display_line-1])
+                        print("\n", lines[display_line-1])
                 else:
                     # Print error message for user feedback
                     print("You left the line number blank.",
@@ -61,8 +62,9 @@ if filename:
 
             # The exception to run if the valid value check failed
             except ValueError:
-                print(f"The value you entered ({display_line}) " +
-                      "isn't an integer.\nPlease try again...")
+                print("The value you entered (",
+                      display_line,
+                      ") isn't an integer.\nPlease try again...")
     else:
         print("Filename doesn't exist")
 else:

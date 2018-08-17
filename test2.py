@@ -1,9 +1,13 @@
-import random
+def calc_lettercase(alist):
+    upper = 0
+    lower = 0
+    for letter in alist:
+        if letter.isupper():
+            upper += 1
+        if letter.islower():
+            lower += 1
+    print("No. of Upper case characters: {}".format(upper))
+    print("No. of Lower case characters: {}".format(lower))
 
-def Number_String(length=10):
-    return ([str(random.randint(0,9)) for _ in range(length)])
-a = Number_String(10)
-b = Number_String(20)
-
-print (a,"\n",b)
-
+samplestring = 'The Quick Brow 9837'
+print(calc_lettercase(samplestring))
