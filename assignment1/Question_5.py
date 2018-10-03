@@ -29,7 +29,7 @@ Result: apples
 """
 
 # Initialize secret key
-secret_key = "cvexfygjknpqs"
+secret_key = "one"
 # Use this alphabet - this includes allowed punctuation
 # The position of the space in the alphabet must be tested if either
 # the alphabet or key are changed to ensure that an encrypted value

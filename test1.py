@@ -1,31 +1,4 @@
-squares2 = [i**2 for i in range(1,101)]
-
-print(squares2)
+=REPT("0 ",COUNTIF($C$2:$C$41,I3+0))&REPT("1 ",COUNTIF($C$2:$C$41,I3+0.1))&REPT("2 ",COUNTIF($C$2:$C$41,I3+0.2))&REPT("3 ",COUNTIF($C$2:$C$41,I3+0.3))&REPT("4 ",COUNTIF($C$2:$C$41,I3+0.4))&REPT("5 ",COUNTIF($C$2:$C$41,I3+0.5))&REPT("6 ",COUNTIF($C$2:$C$41,I3+0.6))&REPT("7 ",COUNTIF($C$2:$C$41,I3+0.7))&REPT("8 ",COUNTIF($C$2:$C$41,I3+0.8))&REPT("9 ",COUNTIF($C$2:$C$41,I3+0.9))
 
 
-
-# Imports
-from random import randint
-
-# Function definitions
-def string_of_numbers(length=15):
-    """ Return a string of random numbers to length specified
-        Defaults to a length of 15 """
-
-    return_string = ""
-
-    number_list = [str(randint(0,9)) for loop in range(length)]
-
-    return return_string.join(number_list)
-
-
-#------------------------- Main code ----------------------------#
-
-# Initialise the list of strings to be searched
-search_strings = []
-# Add a search string to the list with the string_of_numbers function
-search_strings.append(string_of_numbers(10))
-search_strings.append(string_of_numbers())  # This uses the default of 15
-search_strings.append(string_of_numbers(20))
-
-print(search_strings)
+=REPT("0 ",COUNTIF($B$2:$B$41,I3+0))&REPT("1 ",COUNTIF($B$2:$B$41,I3+0.1))&REPT("2 ",COUNTIF($B$2:$B$41,I3+0.2))&REPT("3 ",COUNTIF($B$2:$B$41,I3+0.3))&REPT("4 ",COUNTIF($B$2:$B$41,I3+0.4))&REPT("5 ",COUNTIF($B$2:$B$41,I3+0.5))&REPT("6 ",COUNTIF($B$2:$B$41,I3+0.6))&REPT("7 ",COUNTIF($B$2:$B$41,I3+0.7))&REPT("8 ",COUNTIF($B$2:$B$41,I3+0.8))&REPT("9 ",COUNTIF($B$2:$B$41,I3+0.9))
